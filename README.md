@@ -3,7 +3,7 @@
 
 这个插件实现了AMD规范模块化，利用require.js实现模块调用，并且在微博页面中使用面对对象的编程方式</br>
 
-使用方法：
+使用方法：</br>
 1.如实例中weibo.html,在末尾中添加
 ```<script src="js/lib/r.js" data-main="js/page/weibo"></script>```。</br>
 
