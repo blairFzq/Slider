@@ -5,7 +5,7 @@
 
 使用方法：
 1.如实例中weibo.html,在末尾中添加
-···<script src="js/lib/r.js" data-main="js/page/weibo"></script>···。</br>
+```<script src="js/lib/r.js" data-main="js/page/weibo"></script>```。</br>
 
 2.注意：保持前端架构与本例一样以及html部分中图片展示部分与本例中结构一直即可。</br>
 
