@@ -10,7 +10,7 @@ require(["../modules/unit","../modules/weiboFunc",'jquery'],function(u,wFunc,$){
         init:function(){
             this.picResize();
             this.weiboFunc();
-//          this.getRepost();
+
         },
 //微博图片的缩略功能开始
         picResize:function(){
