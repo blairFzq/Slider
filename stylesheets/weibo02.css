@@ -1,0 +1,787 @@
+body{
+    height: auto;
+}
+
+.container{
+    width: 620px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+/*微博首页*/
+.big_wb{
+   margin-left:40px;
+   padding-top: 10px;
+}
+/*微博页面的导航*/
+.weibo_nav{
+    width: 620px;
+    background: #fff;
+    -moz-border-radius: 2px; /* Firefox */
+    -webkit-border-radius: 2px; /* Safari 和 Chrome */
+    border-radius: 2px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); /* Firefox */
+    -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); /* Safari 和 Chrome */
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    margin-bottom: 20px;
+}
+.weibo_nav ul{
+    text-align: center;
+}
+.weibo_nav li{
+    display: inline;
+}
+.weibo_nav a{
+    display: inline-block;
+    padding:0px 10px;
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+    font-size: 16px;
+}
+.weibo_nav a:hover{
+    background: #316786;
+    color: #fff;
+}
+/*微博筛选部分开始*/
+.wb_tag{
+    width: 600px;
+}
+.wb_tag a{
+    line-height: 25px;
+    height: 25px;
+    padding: 0 40px;
+    font-size: 12px;
+}
+.wb_tag ul{
+    text-align: left;
+}
+.wb_tag a:hover{
+    background: transparent;
+    color: #FA7D3C;
+    font-weight: bolder;
+}
+
+/*微博面板开始*/
+.wb-card{
+    width:600px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 14px;
+    -moz-border-radius: 2px; /* Firefox */
+    -webkit-border-radius: 2px; /* Safari 和 Chrome */
+    border-radius: 2px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); /* Firefox */
+    -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); /* Safari 和 Chrome */
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    background: #fff;
+
+}
+
+/*微博左边开始*/
+.content-left{
+    float: left;
+    width: 50px;
+    padding: 10px 10px 0px 10px;
+    position: relative;
+}
+.wb-face{
+    width: 50px;
+    height: 50px;
+    -moz-border-radius: 25px; /* Firefox */
+    -webkit-border-radius: 25px; /* Safari 和 Chrome */
+    border-radius: 25px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+}
+
+/*微博右边开始*/
+.content-right{
+    float: left;
+    width:520px;
+    padding-right: 10px;
+}
+.wb-name{
+    font-weight: 700;
+}
+.wb-name>a:hover{
+    color: #EB7350;
+}
+.wb-text{
+    margin:  5px 0;
+    font-size: 12px;
+    line-height: 20px;
+}
+/*微博图片的缩略开始*/
+.pic-box{
+    width:300px;
+    overflow: hidden;
+}
+.pic-box li{
+    float: left;
+    max-width:80px;
+    height: 80px;
+    margin: 5px 5px 0 0 ;
+    cursor: url("http://img.t.sinajs.cn/t6/style/images/common/big.cur"),pointer;/*用的新浪的放大镜*/
+}
+.pic-box img{
+    height: auto;
+    max-width: 80px;
+}
+img.muti-pic{
+    width: 80px;
+    height: 80px;
+}
+.big-pic{
+    display: none;
+    width: 440px;
+    height: auto;
+    text-align: center;
+    background: #F2F2F5;
+    padding: 10px;
+}
+.big-pic .pic{
+    position: relative;
+}
+.pic img{
+    cursor: url("http://img.t.sinajs.cn/t6/style/images/common/small.cur"),auto;
+}
+.big-pic img{
+    max-width: 400px;
+}
+.leftCover{
+    width:45%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    /*background: #000000;*/
+    z-index: 3;
+    cursor: url("http://img.t.sinajs.cn/t6/style/images/common/pic_prev.cur"),pointer;/*new*/
+}
+.rightCover{
+    width:45%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    z-index: 3;
+    /*background: blue;*/
+    cursor: url("http://img.t.sinajs.cn/t6/style/images/common/pic_next.cur"),pointer;/*new*/
+}
+/*只有一张图片*/
+.onlyOnePic >.rightCover{
+    width: 0;
+    height: 0;
+}
+.onlyOnePic>.leftCover{
+    width: 0;
+    height: 0;
+}
+
+.small_choose_box{
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 8px;
+
+}
+.small_choose_box li{
+    float: left;
+    display: inline;
+    filter:alpha(opacity=50);
+    opacity: 0.5;
+    margin: 0 4px;
+    width:52px;
+    height: 52px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.small_choose_box .first{
+    filter:alpha(opacity=100);
+    opacity: 1;
+}
+.small_choose_box img{
+    /*border: 2px solid #FA7D3C;*/
+    width: 50px;
+    height: 50px;
+}
+.small_choose_box>i{
+    display: inline-block;/*ie6,7不支持*/
+    *zoom:1;*display: inline;
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+    border: none;
+    width:10px;
+    background: #fff;
+
+}
+.small_choose_box .pre{
+    float: left;
+    -moz-border-radius: 4px 0px 0px 4px; /* Firefox */
+    -webkit-border-radius: 4px 0px 0px 4px; /* Safari 和 Chrome */
+    border-radius:4px 0px 0px 4px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+}
+.small_choose_box .next{
+    float: right;
+    -moz-border-radius: 0px 4px 4px 0px; /* Firefox */
+    -webkit-border-radius: 0px 4px 4px 0px; /* Safari 和 Chrome */
+    border-radius: 0px 4px 4px 0px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+}
+.stage_box{
+    overflow: hidden;
+    width: 360px;
+    height: 52px;
+    margin: 0 10px;
+    position: relative;
+    float: left;
+}
+.stage_box>ul{
+    position: absolute;
+    width: 8000px;
+    left:0px;
+}
+/*微博图片的缩略结束*/
+
+/*微博小功能部分*/
+.wb_handle ,.wb_time{
+    margin-top: 5px;
+    font-size:12px ;
+    color: #808080;
+    clear: both;
+}
+.wb_handle{
+    width: 100%;
+    clear: both;
+    border-top: 1px solid #F2F2F5;
+}
+.handle_a{
+    display: inline-block;
+    *zoom: 1;*float: left;/*兼容ie6,7,8*/
+    width: 146px;
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    border-right: 1px solid #F2F2F5;
+}
+.handle_a :hover{
+    color: #EB7350;
+}
+.wb_time{
+    margin:  10px 0;
+    font-size:12px ;
+    color: #808080;
+}
+.wb_func{
+    float: right;
+}
+.wb_func a{
+    color: #808080;
+    font-size: 12px;
+    line-height: 12px;
+    border-right:1px solid #D9D9D9;
+    padding: 0 5px;
+}
+.wb_func,.wb_handle a:hover{
+    color: #EB7350;
+}
+.wb_func .last{
+    border: none;
+}
+
+/*转发微博部分*/
+.small_wb.wb_expand,.wb-card .wb_expand{
+    width: 500px;
+    background: #F2F2F5;
+}
+.wb-card .wb_expand{
+    padding: 10px;
+}
+/*微博面板结束*/
+
+ /*小微博页面开始*/
+.small_wb{
+    padding: 10px 10px 10px 10px;
+    width:514px;
+    position: relative;
+    margin: 10px 2px;
+}
+/*小微博页面结束*/
+
+/*微博功能部分开始*/
+
+/*评论部分开始*/
+.comment_content{
+    padding: 16px 20px;
+    background: #F2F2F5;
+    position: relative;
+}
+.comment_content img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.post_comment>img{
+    margin-right: 20px;
+}
+.post_comment form{
+    overflow: hidden;
+}
+.post_comment textarea{
+    width: 98%;
+    height: 25px;
+    padding-left: 2px;
+    line-height: 18px;
+    margin-bottom: 10px;
+    border:1px solid #CCC;
+    background: #fff;
+    color: #808080;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15) inset; /* Firefox */
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15) inset; /* Safari 和 Chrome */
+    resize: none;
+}
+.post_comment input{
+     margin: 0 8px;
+}
+.icon_smile{
+    margin-right: 8px;
+}
+.comment_input{
+    float: right;
+    display: inline-block;
+    padding: 3px 10px;
+    border: 1px solid #FBBD9E;
+    color: #fff;
+    background: #FFC09F;
+    cursor: pointer;
+    margin-right: 5px;
+}
+/*网友评论部分*/
+.comment_ul{
+    padding: 0px;
+    margin-left: 50px;
+}
+.comment_content li{
+    border-bottom: 1px solid #D9D9D9 ;
+    padding: 8px 0;
+}
+.comment_text{
+    margin-left: 40px;
+    color: #333;
+}
+.comment_text>p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.comment_text .user{
+    color: #EB7350;
+    margin-right: 5px;
+}
+.C_reply{
+    float: right;
+    color: #000;
+    margin-right: 17px;
+    cursor: pointer;
+}
+.time{
+    margin-top: 2px;
+    color:#808080;
+    font-size: 12px;
+    line-height: 16px;
+}
+/*回复评论*/
+.comment_reply{
+    background: #fff;
+    padding:  8px;
+    margin:8px 0 ;
+}
+
+
+/*一些可重用的部分*/
+/*小三角形*/
+.wb-arrow-border{
+    position: absolute;
+}
+.small_wb_borer em{
+    border-color:transparent transparent  #F2F2F5 transparent;
+    position: absolute;
+    top:-25px;
+    left: 20px;
+}
+.wb_btn_a{
+    display: inline-block;
+    padding: 0 10px;
+    text-align: center;
+    -moz-border-radius: 2px; /* Firefox */
+    -webkit-border-radius: 2px; /* Safari 和 Chrome */
+    border-radius: 2px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    height: 24px;
+    line-height: 25px;
+    font-size: 12px;
+    background: #FFC09F;
+    color:#fff;
+    border: 1px solid #FBBD9E;
+}
+
+
+/*收藏弹出框开始*/
+.collection{
+    width: 275px;
+    position: absolute;
+    color: #333;
+    background: #fff;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -moz-border-radius: 3px; /* Firefox */
+    -webkit-border-radius: 3px; /* Safari 和 Chrome */
+    box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.2); /* Firefox */
+    -webkit-box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.2); /* Safari 和 Chrome */
+}
+.C_title{
+    height: 35px;
+    line-height: 35px;
+    font-weight: bolder;
+    padding-left: 16px;
+    border-bottom: 1px solid #F2F2F5;
+    font-size: 14px;
+}
+.close_a{
+    position: absolute;
+    display: inline-block;
+    padding: 2px;
+    top:-4px;
+    right: 10px;
+    font-size: 18px;
+    color: #696E78;
+
+}
+a.close_a :hover{
+    color: #EB7350;
+}
+.addBox{
+    padding: 8px 0;
+    border-bottom:1px solid #F2F2F5;
+    text-align: center;
+}
+.C_tips{
+    width: 236px;
+    margin:0 auto;
+    height: 28px;
+    line-height: 28px;
+    color: #808080;
+    text-align: center;
+    border:1px solid #E4E7F8;
+    background: #F8F9FE;
+    margin-bottom: 6px;
+}
+.icon{
+    display: inline-block;
+    width: 16px;
+    height: 14px;
+}
+.C_tips>span{
+    margin-right: 3px;
+    margin-top: 6px;
+    vertical-align:top;
+}
+.C_input{
+    width: 236px;
+    height: 28px;
+    padding-left: 2px;
+    margin-bottom: 20px;
+    line-height: 28px;
+    margin:0 8px auto;
+    border:1px solid #CCC;
+    color: #808080;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15) inset; /* Firefox */
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15) inset; /* Safari 和 Chrome */
+
+}
+.tags{
+    margin-top: 20px;
+    border-bottom:1px solid #F2F2F5;
+    padding-bottom: 5px;
+}
+.tags>span{
+    display: inline-block;
+    position: relative;
+    min-width: 24px;
+    padding: 3px 10px;
+    margin: 6px 4px 6px 15px;
+    position: relative;
+    border:1px solid #D9D9D9;
+    cursor: pointer;
+}
+.tags p{
+    text-align: left;
+    margin-left: 10px;
+}
+.C_btn{
+    padding: 8px 0;
+    text-align: center;
+}
+.C_btn>a{
+    display: inline-block;
+    padding: 0 15px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25); /* Firefox */
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25); /* Safari 和 Chrome */
+    line-height: 25px;
+    border:1px solid #D9D9D9;
+    margin-right: 8px;
+}
+.C_add:hover{
+    background: #EB7350;
+}
+.C_add{
+    border:1px solid #F77C3D;
+    background: #F77C3D;
+    color: #fff;
+}
+/*取消收藏开始*/
+.cancle_coll .C_tips{
+    margin-top: 8px;
+    background: none;
+    border:none;
+}
+/*收藏弹出框结束*/
+.icon_ask{
+    background: url("../images/icon.png");
+    background-position: -350px -50px;
+}
+.icon_wans{
+    background: url("../images/icon.png");
+    background-position: -350px -100px;
+}
+
+
+/*制作头像部分开始*/
+.user-info{
+    display: none;
+    width:300px;
+    border: 1px solid red;
+    position: absolute;
+    top:-173px;
+    left: -120px;
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); /* Firefox */
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); /* Safari 和 Chrome */
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+}
+.user-head{
+    padding: 5px 0;
+    background: url(../images/nc-bg.jpg) no-repeat;
+    height: 100px;
+    text-align: center;
+    color: #fff;
+}
+.user-head>div{
+    margin: 2px;
+}
+.user-content{
+    padding: 10px 0;
+    text-align: center;
+    background: #fff;
+}
+.user-content span{
+    font-weight: bolder;
+    padding: 0 2px;
+}
+
+.user-content .center-span{
+    border: 1px solid #ccb6ac;
+    border-top: none;
+    border-bottom: none;
+    padding: 0 4px;
+}
+.user-content  p{
+    margin-top: 5px;
+}
+.wb-arrow-user{
+    left: 50%;
+    margin-left: -8px;
+}
+.wb-arrow-user em{
+    border-color:#fff transparent transparent transparent;
+
+}
+
+/*制作头像部分结束*/
+
+
+/* 转发弹窗部分 */
+.retMargin{
+    margin:10px;
+}
+#ret{
+    width:510px;
+    font-size: 12px;
+    position: fixed;
+    top:10%;
+    left: 25%;
+    background-color: #fff;
+    border-radius: 3px;
+    -o-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-top: 3px solid #316786;
+    
+}
+#retHead{
+    height: 40px;
+    border-bottom: 1px solid #eee;
+}
+#retTitle{
+    margin: 10px 0 0 10px;
+    display:inline-block;
+    font-weight: bold;
+}
+#closeRet{
+    float: right;
+    display: inline-block;
+    margin: 6px 10px;
+    font-size: 20px;
+}
+#closeRet:hover{
+    color:#FF3300;
+}
+#closeRet:active{
+    color:#FF3300;
+}
+#retTo{
+
+}
+#retTo .text{
+    float: left;
+    line-height: 30px;
+    margin-right: 10px;
+}
+.buttonGroup{
+    display: inline-block;
+}
+.retToOption{
+    margin: 0;
+    border:1px solid #ddd;
+    width: 80px;
+    height: 28px;
+    float: left;
+    cursor: pointer;
+}
+.retToOption:hover,.retToOption:active{
+    border-color: #316786;
+}
+.activeOption{
+    background-color: #fff;
+    font-weight: bold;
+}
+#retArticle{
+    background-color: #eee;
+    color:#999;
+    padding: 8px;
+}
+#retArticle b{
+    color:#666;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+#retArea{
+    box-sizing:border-box;
+    -o-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    margin:0 auto;
+    width: 100%;
+    resize: none;
+}
+#retOpt{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.showFace{
+    margin-right: 10px;
+}
+.showFace:hover,.showFace:active{
+    color:#5389a8;
+}
+#retSubmitDiv{
+    position: relative;
+}
+#selectAcc{
+    margin:0 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#selectAcc:hover,#selectAcc:active{
+    color: #316786;
+}
+#accGroup{
+    position: absolute;
+    left: 0px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 4px 5px 5px #999;
+    -o-box-shadow: 4px 5px 5px #999;
+    -moz-box-shadow: 4px 5px 5px #999;
+    -webkit-box-shadow: 4px 5px 5px #999;
+}
+.accOption{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+.accOption:hover,.accOption:active{
+    background-color: #eee;
+    color: #316786;
+}
+#retSubmit{
+    
+    border: none;
+    border-radius: 3px;
+    -o-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color:#5389a8;
+    color: #fff;
+    width: 70px;
+    height: 30px;
+    cursor: pointer;
+}
+#retSubmit:hover,#retSubmit:active{
+    background-color: #316786;
+}
+
+/* 转发弹窗部分结束 */
+/* 阴影遮罩 */
+#shade{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+    -moz-opacity:0.5; /*Firefox私有，透明度50%*/
+    opacity:0.5;/*其他，透明度50%*/
+}
+
